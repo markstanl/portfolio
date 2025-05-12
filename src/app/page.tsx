@@ -1,103 +1,130 @@
-import Image from "next/image";
+import {ProjectType} from '@/../types/project';
+import Project from '@/components/Project';
+import Technologies from "@/app/Technologies";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+const Home = () => {
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    const projects: ProjectType[] = [
+        {
+            _id: '1',
+            title: 'Project 1',
+            description: 'Description 1',
+            link: 'https://example.com',
+            slug: {current: 'project-1'},
+            tags: ['tag1', 'tag2'],
+            image: {
+                asset: {
+                    _ref: 'image-ref-1',
+                    _type: 'reference'
+                }
+            },
+            sortOrder: 1
+        },
+        {
+            _id: '2',
+            title: 'Project 2',
+            description: 'Description 2',
+            link: 'https://example.com',
+            slug: {current: 'project-2'},
+            tags: ['tag3', 'tag4'],
+            image: {
+                asset: {
+                    _ref: 'image-ref-2',
+                    _type: 'reference'
+                }
+            },
+            sortOrder: 2
+        }
+    ];
+
+    return (
+        <div className="w-screen min-h-screen bg-sec">
+            {/* Hero */}
+            <section className={'w-full h-screen flex flex-col'}>
+                <nav className={''}>
+                    <ul className={'flex gap-8 p-4'}>
+                        <li>
+                            <a href="#about" className={'text-brand-text'}>About</a>
+                        </li>
+                        <li>
+                            <a href="#projects" className={'text-brand-text'}>Projects</a>
+                        </li>
+                        <li>
+                            <a href="#creative" className={'text-brand-text'}>Creative</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div className={'w-full flex '}>
+                    <div className={'w-[50%] flex flex-col items-left justify-center text-brand-text p-24 gap-4'}>
+                        <h1 className={'text-6xl py-4'}>Mark Stanley</h1>
+                        <h2 className={'text-2xl'}>Software Development Intern @ C-Motive</h2>
+                        <h2 className={'text-2xl'}>Student @ UW-Madison</h2>
+                        <div className={'w-full flex justify-between'}>
+                            {/* Icons */}
+
+                        </div>
+                        <button>
+                            {/* Download CV */}
+
+                        </button>
+                    </div>
+                    <div className={'w-[50%] flex items-center justify-center'}>
+                        <div className={'w-64 h-128 bg-white'}/>
+                    </div>
+                </div>
+            </section>
+            {/* About  */}
+            <section className={'w-full flex flex-col items-center min-h-screen'} id={'about'}>
+                <h1 className={'text-5xl text-brand-prim'}>About</h1>
+                <div className={'flex items-center'}>
+                    <div className={'w-1/2 flex items-center justify-center'}>
+                        <div className={'w-64 h-128 bg-white'}/>
+                    </div>
+                    <div className={'w-1/2 py-8'}>
+                        <p>
+                            Hey, I’m Mark. I am a student at UW-Madison studying Computer Science, Mathematics, and
+                            Philosophy.
+                            Currently, I am working at C-Motive as a software developer intern, crafting new software to
+                            help enhance research efficiency. I am a hard-working developer, with a special interest in
+                            machine learning and front-end development.
+                            Off the computer I am a musician, write philosophical works, and rock climb!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            {/* Projects */}
+            <section className={'w-full flex flex-col items-center min-h-screen'} id={'projects'}>
+                <h1 className={'text-5xl'}>Projects</h1>
+                <div className={'flex items-center'}>
+                    {projects.map((project) => <Project key={project._id} project={project}/>)}
+                </div>
+            </section>
+            {/* Technologies */}
+            <section className={'flex flex-col items-center min-h-screen'}>
+                <h1 className={'text-5xl'}>Technologies</h1>
+                <div className={'flex items-center'}>
+                    <Technologies/>
+                </div>
+            </section>
+
+            {/* Creative */}
+            <section className={'flex flex-col items-center min-h-screen'} id={'creative'}>
+                <h1 className={'text-5xl'}>Creative</h1>
+                <div className={'flex items-center justify-between'}>
+                    <div className={'w-64 h-64 bg-white text-black'}>
+                        <p>Off the computer, I am a musician and write some philosophy papers. See my creative work here</p>
+                    </div>
+                    <div className={'w-64 h-64 bg-white text-black'}>
+                        <p>{'Blog ->'}</p>
+                        <p>{'Published Paper ->'}</p>
+                        <p>{'Music ->'}</p>
+                    </div>
+                </div>
+            </section>
+
+            {}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
+
+export default Home;
