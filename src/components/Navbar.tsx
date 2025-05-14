@@ -3,19 +3,21 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
+        <nav className="w-full bg-transparent py-4 px-32">
+            <ul className="flex justify-end gap-18 font-jetbrains text-xl">
                 <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/" className="hover:text-brand-prim transition-colors duration-300 underline">
+                        Home
+                    </Link>
                 </li>
                 <li>
-                    <Link href="/about">About</Link>
-                </li>
-                <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/blog" className="hover:text-brand-prim transition-colors duration-300 underline">
+                        Blog
+                    </Link>
                 </li>
             </ul>
         </nav>
-    )
-}
+    );
+};
+
 export default Navbar

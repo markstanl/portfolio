@@ -1,11 +1,10 @@
 export type ProjectType = {
     _id: string;
     title: string;
-    description: string;
+    body: string;
     link: string;
-    slug: { current: string };
     tags: string[];
-    image: {
+    image?: {
         asset: {
             _ref: string;
             _type: 'reference';
