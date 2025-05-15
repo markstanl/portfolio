@@ -1,30 +1,46 @@
 'use client'
-import React, {useState} from 'react'
 
-import IconMaps from "@/components/iconMaps";
+import React, {useEffect, useState} from 'react'
+import {useAnimate, stagger} from 'motion/react'
+import {useInView} from 'react-intersection-observer'
 
-const technologyButtons: string[] = ['Languages', 'Machine Learning', 'Web Development', 'Development Tools']
+import IconMaps from '@/components/iconMaps'
 
-const languages: string[] = ['Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'MATLAB', 'React', 'SQL', 'LaTeX']
-const machineLearning: string[] = ['Python', 'Jupyter Notebook', 'PyTorch', 'TensorFlow', 'scikit-learn', 'NLTK', 'NumPy', 'SciPy', 'pandas', 'Polars', 'geopandas', 'PyArrow', 'Matplotlib']
-const webDevelopment: string[] = ['TypeScript', 'JavaScript', 'Next.js', 'Tailwind CSS', 'React', 'React Native', 'HTML', 'CSS', 'Flask', 'FastAPI', 'REST']
-const developmentTools: string[] = ['Git', 'GitHub', 'Docker', 'Linux', 'wit.ai', 'Dialogflow', 'Figma']
+const technologyButtons = ['Languages', 'Machine Learning', 'Web Development', 'Development Tools']
 
-const technologyArrays: { [key: string]: string[] } = {
-    'Languages': languages,
+const languages = ['Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'MATLAB', 'React', 'SQL', 'LaTeX']
+const machineLearning = ['Python', 'Jupyter Notebook', 'PyTorch', 'TensorFlow', 'scikit-learn', 'NLTK', 'NumPy', 'SciPy', 'pandas', 'Polars', 'geopandas', 'PyArrow', 'Matplotlib']
+const webDevelopment = ['TypeScript', 'JavaScript', 'Next.js', 'Tailwind CSS', 'React', 'React Native', 'HTML', 'CSS', 'Flask', 'FastAPI', 'REST']
+const developmentTools = ['Git', 'GitHub', 'Docker', 'Linux', 'wit.ai', 'Dialogflow', 'Figma']
+
+const technologyArrays: Record<string, string[]> = {
+    Languages: languages,
     'Machine Learning': machineLearning,
     'Web Development': webDevelopment,
     'Development Tools': developmentTools,
 }
 
 const Technologies = () => {
-
     const [activeButton, setActiveButton] = useState<string>(technologyButtons[0])
     const [activeContent, setActiveContent] = useState<string[]>(technologyArrays[activeButton])
+    const [scope, animate] = useAnimate()
+    const [sectionRef, inView] = useInView({threshold: 0.5, triggerOnce: true});
+
+    useEffect(() => {
+        if (!inView) return
+        const items = scope.current?.querySelectorAll('.tech-item')
+        if (!items) return
+
+        animate(
+            items,
+            {opacity: [0, 1], y: [-10, 0]},
+            {delay: stagger(0.05), duration: 0.3, ease: 'easeOut'}
+        )
+    }, [activeContent, animate, scope, inView])
 
     return (
-        <div className={'flex flex-col items-center w-2/3'}>
-            <div className={'flex justify-center flex-wrap mb-4 gap-2'}>
+        <div ref={scope} className="flex flex-col items-center w-2/3">
+            <div className="flex justify-center flex-wrap mb-4 gap-2">
                 {technologyButtons.map((button) => (
                     <button
                         key={button}
@@ -39,13 +55,17 @@ const Technologies = () => {
                         } p-2 px-3 m-2 rounded border-brand-border hover:cursor-pointer`}
                     >
                         {button}
-                    </button>))
-                }
+                    </button>
+                ))}
             </div>
-            <div className={'flex flex-wrap justify-center gap-3 p-4 bg-brand-text w-full rounded-xl'}>
-                {activeContent.map((item) => (
-                    <div key={item} className={'p-2 mx-1 bg-brand-bg px-4 rounded text-brand-text flex items-center gap-2'}>
-                        <IconMaps name={item} />
+            <div className="flex flex-wrap justify-center gap-3 p-4 bg-brand-text w-full rounded-xl"
+                 ref={sectionRef}>
+                {inView && activeContent.map((item) => (
+                    <div
+                        key={item}
+                        className="tech-item opacity-0 p-2 mx-1 bg-brand-bg px-4 rounded text-brand-text flex items-center gap-2"
+                    >
+                        <IconMaps name={item}/>
                         {item}
                     </div>
                 ))}
@@ -53,4 +73,5 @@ const Technologies = () => {
         </div>
     )
 }
+
 export default Technologies
