@@ -11,13 +11,13 @@ const options = { next: { revalidate: 30 } };
 export default async function Projects() {
     const projects: SanityDocument[] = await client.fetch(PROJECTS_QUERY, {}, options);
     projects.sort((a: SanityDocument, b: SanityDocument) => {
-        const orderA = (a as unknown as ProjectType).sortOrder;
-        const orderB = (b as unknown as ProjectType).sortOrder;
+        const orderA = (a as unknown as ProjectType).order;
+        const orderB = (b as unknown as ProjectType).order;
         return orderA - orderB;
     });
 
     return (
-        <div className="flex flex-wrap justify-evenly mx-auto min-h-screen w-full p-16 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 w-full px-16 justify-items-center">
             {projects.map((project: SanityDocument) => {
                 const castProject = project as unknown as ProjectType;
                 return <Project key={castProject._id} project={castProject} />;

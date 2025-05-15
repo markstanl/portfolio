@@ -25,10 +25,10 @@ export default async function IndexPage() {
 
     return (
         <main
-            className="container mx-auto min-h-screen w-screen p-8 flex flex-col items-center font-jetbrains bg-brand-bg">
+            className="container mx-auto min-h-screen w-screen flex flex-col items-center font-jetbrains bg-brand-bg">
             <Navbar />
             <h1 className="text-4xl font-bold mb-8 font-inter text-brand-sec">Blog</h1>
-            <h4 className={'p-4 w-2/3'}>Here is a collection of various creative works. Ranging from computer science
+            <h4 className={'px-12 w-2/3'}>Here is a collection of various creative works. Ranging from computer science
                 blog posts, to philosophy papers, and even music arrangements!</h4>
             <TagFilter posts={posts} tags={sortedTags}/>
         </main>

@@ -11,6 +11,7 @@ export default {
             colors: {
                 brand: {
                     bg: '#333333',
+                    'bg-hover': '#474747',
                     text: '#f2f2f2',
                     'text-hover': '#cecece',
                     prim: '#afe1fd',
@@ -18,6 +19,7 @@ export default {
                     'prim-hover': '#8ebeda',
                     sec: '#e1affd',
                     'sec-dark': '#330250',
+                    'sec-hover': '#B682D5',
                     acc: '#46c898',
                     'acc-dark': '#37b989',
                     footer: '#474747',

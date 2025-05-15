@@ -7,6 +7,7 @@ const Tags = ({tags}: { tags: string[] }) => {
         <div className={'w-full flex justify-items-start gap-4'}>
             {tags.map((tag => {
 
+                // a bit of randomness for variety
                 const randomSigns = [Math.random() < 0.5 ? -1 : 1, Math.random() < 0.5 ? -1 : 1, Math.random() < 0.5 ? -1 : 1]
 
                 return(

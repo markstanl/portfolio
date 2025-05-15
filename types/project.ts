@@ -10,5 +10,5 @@ export type ProjectType = {
             _type: 'reference';
         };
     };
-    sortOrder: number;
+    order: number;
 };

@@ -10,7 +10,7 @@ const TagFilter = ({posts, tags}: { posts: SanityDocument[], tags: string[] }) =
     const filteredPosts = selectedTag ? posts.filter((post: SanityDocument) => post.tags?.includes(selectedTag)) : posts;
 
     return (
-        <>
+        <div className={'flex flex-col items-center p-8'}>
             <h2 className={'text-xl text-brand-acc underline mb-2 w-3/4'}>Filter</h2>
             <div className={'flex items-center flex-wrap justify-items-start gap-2 w-3/4 mb-8'}>
                 {tags.map((tag: string) => {
@@ -49,13 +49,16 @@ const TagFilter = ({posts, tags}: { posts: SanityDocument[], tags: string[] }) =
                                 {post.tags && post.tags.map((tag: string) => (
                                     <span
                                         key={tag}
-                                        className={`text-sm px-2 py-1 rounded-sm mr-3 select-none 
+                                        className={`text-sm px-2 py-1 rounded-sm mr-3 select-none transition-all duration-300 cursor-pointer
                                         ${
-                                            tag === selectedTag ? 'bg-brand-sec text-brand-bg border-2 border-brand-border' : 'bg-brand-bg text-brand-text'
+                                            tag === selectedTag ? 'bg-brand-sec hover:bg-brand-sec-hover text-brand-bg border-2 border-brand-border' : 'bg-brand-bg text-brand-text hover:bg-brand-bg-hover'
                                         }
                                         ${
-                                            tag === "Published" && "hover:bg-brand-sec hover:text-brand-bg transition-colors duration-300"
+                                            tag === "Published" && "hover:text-brand-prim"
                                         }`}
+                                        onClick={() =>
+                                            setSelectedTag(prev => (prev === tag ? null : tag))
+                                        }
                                     >
                                         {tag}
                                     </span>
@@ -73,7 +76,7 @@ const TagFilter = ({posts, tags}: { posts: SanityDocument[], tags: string[] }) =
                     </li>
                 ))}
             </ul>
-        </>
+        </div>
     )
 }
 export default TagFilter

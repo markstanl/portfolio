@@ -27,7 +27,7 @@ const Home = () => {
                             <span className={'text-brand-acc'}>{" C-Motive"}</span></h2>
                         <HeroTypewriter/>
                         <SocialIcons/>
-                        <Download />
+                        <Download/>
                     </div>
                     <div className={'w-1/2 h-3/4 flex items-center justify-center'}>
                         <Image src={markTreeImage} alt={'Picture of Mark standing by a tree'}
@@ -37,7 +37,7 @@ const Home = () => {
             </section>
             {/* About  */}
             <section className={'w-full flex flex-col items-center min-h-screen'} id={'about'}>
-                <h1 className={'text-5xl text-brand-prim font-inter font-bold'}>About</h1>
+                <h1 className={'text-5xl text-brand-prim font-inter font-bold mb-6'}>About</h1>
                 <div className={'flex items-center'}>
                     <div className={'w-1/3 h-full flex flex-col items-end justify-center'}>
                         <Image src={markSquat} alt={'Picture of Mark standing by a tree'}
@@ -61,7 +61,7 @@ const Home = () => {
             </section>
             {/* Projects */}
             <section className={'w-full flex flex-col items-center min-h-screen'} id={'projects'}>
-                <h1 className={'text-5xl text-brand-sec font-inter font-bold mb-8'}>Projects</h1>
+                <h1 className={'text-5xl text-brand-sec font-inter font-bold mb-6'}>Projects</h1>
                 <Projects/>
             </section>
             {/* Technologies */}
@@ -79,69 +79,99 @@ const Home = () => {
                     <div className={'w-1/4 text-brand-text text-xl'}>
                         <p>Off the computer, I am a musician and write some philosophy papers. See my creative work on
                             my <Link href={'/blog'}
-                                     className={'hover:text-brand-prim transition-colors duration-300 underline cursor-pointer'}>blog</Link>
+                                     className={'hover:text-brand-prim transition-colors duration-300 underline cursor-pointer'}>blog</Link>.
                         </p>
 
                     </div>
                     <div
                         className={'w-1/4 bg-brand-text text-brand-bg rounded-lg flex flex-col justify-items-start p-6 gap-4 underline'}>
                         <Link href={'/blog'}
-                              className={'hover:text-brand-prim-dark transition-colors duration-300 underline'}>{'Blog ->'}</Link>
+                              className={'hover:text-brand-prim-dark hover:tracking-wide transition-all duration-300 underline'}>{'Blog ->'}</Link>
                         <Link href={'/blog'}
-                              className={'hover:text-brand-prim-dark transition-colors duration-300 underline'}>{'Published Paper ->'}</Link>
-                        <a className={'hover:text-brand-prim-dark transition-colors duration-300 underline cursor-pointer'}>{'Music ->'}</a>
+                              className={'hover:text-brand-prim-dark hover:tracking-wide transition-all duration-300 underline'}>{'Published Paper ->'}</Link>
+                        <a className={'hover:text-brand-prim-dark hover:tracking-wide transition-all duration-300 underline cursor-pointer'}>{'Music ->'}</a>
                     </div>
                 </div>
             </section>
 
             {/* Footer */}
-            <footer className={'w-full flex items-center justify-center bg-brand-footer text-sm py-10'}>
-                <div className={'flex gap-10 justify-evenly'}>
-                    <div className={'flex-1'}>
-                        <h4 className={'text-xl text-brand-sec'}>Mark Stanley</h4>
-                        <p>Developer @ <span className={'text-brand-acc'}>C-Motive</span>. Student at UW-Madison.
-                            Specializing in Machine Learning and Web
-                            Development</p>
+            <footer className="w-full bg-brand-footer text-sm py-10">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-6xl mx-auto">
+                    <div>
+                        <h4 className="text-xl text-brand-sec mb-2">Mark Stanley</h4>
+                        <p>
+                            Developer at <span className="text-brand-acc">C-Motive</span>. Student at UW-Madison.
+                            Specializing in Machine Learning and Web Development.
+                        </p>
                     </div>
-                    <div className={'flex-1'}>
-                        <h4 className={'text-xl text-brand-sec'}>Social</h4>
-                        <ul>
+
+                    <div>
+                        <h4 className="text-xl text-brand-sec mb-2">Social</h4>
+                        <ul className="space-y-1">
                             <li>
-                                <a href="https://github.com/markstanl" target="_blank" rel="noopener noreferrer"
-                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">GitHub</a>
+                                <a
+                                    href="https://github.com/markstanl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-brand-text hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                                >
+                                    GitHub
+                                </a>
                             </li>
                             <li>
-                                <a href="https://linkedin.com/in/markstanl" target="_blank" rel="noopener noreferrer"
-                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">LinkedIn</a>
+                                <a
+                                    href="https://linkedin.com/in/markstanl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-brand-text hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                                >
+                                    LinkedIn
+                                </a>
                             </li>
                             <li>
-                                <a href="https://huggingface.co/markstanl" target="_blank" rel="noopener noreferrer"
-                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">Hugging
-                                    Face</a>
+                                <a
+                                    href="https://huggingface.co/markstanl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-brand-text hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                                >
+                                    Hugging Face
+                                </a>
                             </li>
                             <li>
-                                <a href="mailto:markgstanley1@gmail.com"
-                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">Email</a>
+                                <a
+                                    href="mailto:markgstanley1@gmail.com"
+                                    className="text-brand-text hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                                >
+                                    Email
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div className={'flex-1'}>
-                        <h4 className={'text-xl text-brand-sec'}>Links</h4>
-                        <ul>
+
+                    <div>
+                        <h4 className="text-xl text-brand-sec mb-2">Links</h4>
+                        <ul className="space-y-1">
                             <li>
-                                <Link href="/blog"
-                                      className={'hover:text-brand-prim transition-colors duration-300 underline'}>Blog</Link>
+                                <Link
+                                    href="/blog"
+                                    className="hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                                >
+                                    Blog
+                                </Link>
                             </li>
                         </ul>
                     </div>
-                    <div className={'flex-1'}>
+
+                    <div>
                         <p>Designed in Figma</p>
                         <p>Crafted with Next</p>
                         <p>Built with Love</p>
-                        <p className={'text-brand-acc'}>-Mark</p>
+                        <p className="text-brand-acc">-Mark</p>
                     </div>
                 </div>
             </footer>
+
         </div>
     );
 }
