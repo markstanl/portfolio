@@ -6,6 +6,7 @@ import HeroTypewriter from '@/components/HeroTypewriter';
 import Projects from '@/components/Projects';
 import Technologies from "@/app/Technologies";
 import SocialIcons from "@/components/SocialIcons";
+import Download from '@/components/Download';
 
 import markTreeImage from '@/../public/mark_tree.jpg';
 import markSquat from '@/../public/mark_squat.jpg'
@@ -15,40 +16,22 @@ const Home = () => {
 
     return (
         <div className="w-screen min-h-screen bg-brand-bg font-jetbrains flex flex-col items-center gap-8">
-            <Navbar />
+            <Navbar/>
             {/* Hero */}
             <section className={'w-full h-screen flex flex-col justify-items-start'}>
                 <div className={'w-full flex h-full'}>
                     <div className={'w-[50%] h-2/3 flex flex-col items-left justify-center text-brand-text p-24 gap-2'}>
                         <h1 className={'text-6xl py-4 font-inter font-bold mb-2'}>Mark Stanley</h1>
-                        <h2 className={'text-2xl font-jetbrains text-brand-prim'}>Software Development Intern <span className={'text-brand-text'}>@</span>
+                        <h2 className={'text-2xl font-jetbrains text-brand-prim'}>Software Development Intern <span
+                            className={'text-brand-text'}>@</span>
                             <span className={'text-brand-acc'}>{" C-Motive"}</span></h2>
                         <HeroTypewriter/>
                         <SocialIcons/>
-                        <a
-                            href="/cv.pdf"
-                            download
-                            className="w-fit inline-flex items-center gap-2 bg-brand-prim text-brand-bg font-jetbrains rounded-md py-2 px-4 transition-colors hover:bg-brand-prim-hover duration-300"
-                        >
-                            {/* Download CV */}
-                            Download CV
-                            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                   strokeWidth={2}>
-                                    <path strokeDasharray={20} strokeDashoffset={20} d="M12 3l0 17.5">
-                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s"
-                                                 values="20;0"></animate>
-                                    </path>
-                                    <path strokeDasharray={12} strokeDashoffset={12} d="M12 21l7 -7M12 21l-7 -7">
-                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s"
-                                                 values="12;0"></animate>
-                                    </path>
-                                </g>
-                            </svg>
-                        </a>
+                        <Download />
                     </div>
                     <div className={'w-1/2 h-3/4 flex items-center justify-center'}>
-                        <Image src={markTreeImage} alt={'Picture of Mark standing by a tree'} className={'h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]'} />
+                        <Image src={markTreeImage} alt={'Picture of Mark standing by a tree'}
+                               className={'h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]'}/>
                     </div>
                 </div>
             </section>
@@ -57,7 +40,8 @@ const Home = () => {
                 <h1 className={'text-5xl text-brand-prim font-inter font-bold'}>About</h1>
                 <div className={'flex items-center'}>
                     <div className={'w-1/3 h-full flex flex-col items-end justify-center'}>
-                        <Image src={markSquat} alt={'Picture of Mark standing by a tree'} className={'h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]'} />
+                        <Image src={markSquat} alt={'Picture of Mark standing by a tree'}
+                               className={'h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]'}/>
                     </div>
                     <div className={'w-2/3 flex flex-col items-center justify-center gap-4 text-md'}>
                         <p className={'w-1/2 indent-4 text-justify'}>
@@ -78,7 +62,7 @@ const Home = () => {
             {/* Projects */}
             <section className={'w-full flex flex-col items-center min-h-screen'} id={'projects'}>
                 <h1 className={'text-5xl text-brand-sec font-inter font-bold mb-8'}>Projects</h1>
-                <Projects />
+                <Projects/>
             </section>
             {/* Technologies */}
             <section className={'flex flex-col items-center min-h-[50vh] w-full mb-8'}>
@@ -94,13 +78,17 @@ const Home = () => {
                 <div className={'w-full flex items-center justify-evenly'}>
                     <div className={'w-1/4 text-brand-text text-xl'}>
                         <p>Off the computer, I am a musician and write some philosophy papers. See my creative work on
-                            my <Link href={'/blog'} className={'hover:text-brand-prim transition-colors duration-300 underline cursor-pointer'}>blog</Link>
+                            my <Link href={'/blog'}
+                                     className={'hover:text-brand-prim transition-colors duration-300 underline cursor-pointer'}>blog</Link>
                         </p>
 
                     </div>
-                    <div className={'w-1/4 bg-brand-text text-brand-bg rounded-lg flex flex-col justify-items-start p-6 gap-4 underline'}>
-                        <Link href={'/blog'} className={'hover:text-brand-prim-dark transition-colors duration-300 underline'}>{'Blog ->'}</Link>
-                        <Link href={'/blog'} className={'hover:text-brand-prim-dark transition-colors duration-300 underline'}>{'Published Paper ->'}</Link>
+                    <div
+                        className={'w-1/4 bg-brand-text text-brand-bg rounded-lg flex flex-col justify-items-start p-6 gap-4 underline'}>
+                        <Link href={'/blog'}
+                              className={'hover:text-brand-prim-dark transition-colors duration-300 underline'}>{'Blog ->'}</Link>
+                        <Link href={'/blog'}
+                              className={'hover:text-brand-prim-dark transition-colors duration-300 underline'}>{'Published Paper ->'}</Link>
                         <a className={'hover:text-brand-prim-dark transition-colors duration-300 underline cursor-pointer'}>{'Music ->'}</a>
                     </div>
                 </div>
@@ -111,7 +99,8 @@ const Home = () => {
                 <div className={'flex gap-10 justify-evenly'}>
                     <div className={'flex-1'}>
                         <h4 className={'text-xl text-brand-sec'}>Mark Stanley</h4>
-                        <p>Developer @ <span className={'text-brand-acc'}>C-Motive</span>. Student at UW-Madison. Specializing in Machine Learning and Web
+                        <p>Developer @ <span className={'text-brand-acc'}>C-Motive</span>. Student at UW-Madison.
+                            Specializing in Machine Learning and Web
                             Development</p>
                     </div>
                     <div className={'flex-1'}>
@@ -127,10 +116,12 @@ const Home = () => {
                             </li>
                             <li>
                                 <a href="https://huggingface.co/markstanl" target="_blank" rel="noopener noreferrer"
-                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">Hugging Face</a>
+                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">Hugging
+                                    Face</a>
                             </li>
                             <li>
-                                <a href="mailto:markgstanley1@gmail.com" className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">Email</a>
+                                <a href="mailto:markgstanley1@gmail.com"
+                                   className="text-brand-text hover:text-brand-prim transition-colors duration-300 underline">Email</a>
                             </li>
                         </ul>
                     </div>
@@ -138,7 +129,8 @@ const Home = () => {
                         <h4 className={'text-xl text-brand-sec'}>Links</h4>
                         <ul>
                             <li>
-                                <Link href="/blog" className={'hover:text-brand-prim transition-colors duration-300 underline'}>Blog</Link>
+                                <Link href="/blog"
+                                      className={'hover:text-brand-prim transition-colors duration-300 underline'}>Blog</Link>
                             </li>
                         </ul>
                     </div>

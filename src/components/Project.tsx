@@ -1,5 +1,6 @@
 import React from 'react'
 import {ProjectType} from '@/../types/project'
+import Tags from '@/components/Tags'
 
 type ProjectProps = {
     project: ProjectType
@@ -23,13 +24,7 @@ const Project: React.FC<ProjectProps> = ({project}) => {
                 <div className={'w-full h-18 bg-brand-prim rounded-lg outline-1 outline-brand-bg'}/>
                 <p className={'text-sm'}>{project.body}</p>
             </div>
-            <div className={'w-full flex justify-items-start gap-4'}>
-                {project.tags.map((tag => (
-                    <span key={tag} className={'px-2 py-1 text-xs bg-brand-bg text-brand-text rounded-sm select-none'}>
-                        #{tag}
-                    </span>
-                )))}
-            </div>
+            <Tags tags={project.tags}/>
         </div>
     )
 }
