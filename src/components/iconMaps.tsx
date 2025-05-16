@@ -136,7 +136,7 @@ type IconMapsProps = {
     className?: string;
 };
 
-const IconMaps: React.FC<IconMapsProps> = ({name, className = 'w-5 h-5 text-brand-prim'}) => {
+const IconMaps: React.FC<IconMapsProps> = ({name, className = 'md:w-5 md:h-5 h-4 w-4 text-brand-prim'}) => {
     const icon = iconMap[name];
     if (!icon) return null;
 

@@ -9,17 +9,18 @@ const Download = () => {
             href="/cv.pdf"
             download
             onMouseEnter={() => setHoverKey((bool) => !bool)}
-            className="w-fit inline-flex items-center gap-2 bg-brand-prim text-brand-bg font-jetbrains
-                            rounded-md py-2 px-4 all text-md hover:bg-brand-prim-hover
+            className="w-fit inline-flex items-center bg-brand-prim text-brand-bg font-jetbrains text-nowrap
+                            rounded-md hover:bg-brand-prim-hover
                             hover:tracking-wide transition-all duration-300
+                            py-2 px-4 text-md gap-2
+                            lg:text-base md:text-sm text-xs
                             "
         >
             Download CV
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 key={hoverKey ? 'a': 'b'}
-                width={20}
-                height={20}
+                className={'lg:w-5 md:w-4 w-3'}
                 viewBox="0 0 24 24">
                 <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
                    strokeWidth={2}>

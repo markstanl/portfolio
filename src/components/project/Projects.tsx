@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project';
-import { ProjectType } from '@/../types/project';
+import { ProjectType } from '../../../types/project';
 
 import { type SanityDocument } from 'next-sanity';
 import { client } from '@/sanity/client';

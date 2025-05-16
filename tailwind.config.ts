@@ -24,6 +24,7 @@ export default {
                     'acc-dark': '#37b989',
                     footer: '#474747',
                     border: '#333333',
+                    glass: '#000'
                 },
             },
         },

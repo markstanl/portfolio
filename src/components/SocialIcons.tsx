@@ -4,7 +4,7 @@ import {motion} from "motion/react"
 
 const SocialIcons = () => {
     return (
-        <div className={'w-full flex justify-items-start items-center gap-8 my-4'}>
+        <div className={'w-full flex justify-items-start items-center lg:gap-8 md:gap-6 gap-4 lg:my-4 md:my-2 my-1'}>
             {/* GitHub */}
             <motion.a href={'https://github.com/markstanl'}
                       rel={'noopener noreferrer'}
@@ -20,8 +20,8 @@ const SocialIcons = () => {
                           times: [0, 0.3, 0.55, 0.8, 1.05],
                       }}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24"
-                     className={'hover:text-brand-acc transition-colors duration-300'}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                     className={'hover:text-brand-acc transition-colors duration-300 md:w-8 w-6'}>
                     <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
                           strokeWidth={2}
                           d="M9 22v-3q0-2 1-3A7 6.5 0 0 1 5 5Q4 3 5 1q3 0 4 2q3.5-1 7 0q1-2 4-2q1 2 0 4a7 6.5 0 0 1-5 11q1 1 1 3v3m-7-3c-4 1-4-2-7-3"></path>
@@ -41,8 +41,8 @@ const SocialIcons = () => {
                           ease: "easeInOut",
                           times: [0, 0.3, 0.55, 0.8, 1.05],
                       }}>
-                <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24"
-                     className={'hover:text-brand-acc transition-colors duration-300'}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                     className={'hover:text-brand-acc transition-colors duration-300 md:w-8 w-6'}>
                     <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
                        strokeWidth={1.5}>
                         <circle cx={4} cy={4} r={2}></circle>
@@ -66,8 +66,9 @@ const SocialIcons = () => {
                     times: [0, 0.3, 0.55, 0.8, 1.05],
                 }}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 32 32"
-                     className={'hover:text-brand-acc transition-colors duration-300'}>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 32 32"
+                     className={'hover:text-brand-acc transition-colors duration-300 md:w-8 w-6'}>
                     <g fill="currentColor">
                         <path
                             d="M3 15.999c0-3.67 1.106-6.91 3.235-9.221C8.35 4.48 11.568 3 15.999 3s7.648 1.48 9.764 3.778c2.129 2.311 3.235 5.55 3.235 9.22q0 .632-.044 1.244c.33.179.602.447.787.772c.418.05.796.23 1.094.497q.163-1.232.163-2.512c0-4.061-1.227-7.821-3.764-10.576C24.684 2.654 20.903 1 16 1S7.313 2.654 4.763 5.423C2.226 8.178 1 11.938 1 15.999q0 1.281.163 2.513a2 2 0 0 1 1.096-.498a2 2 0 0 1 .784-.77A18 18 0 0 1 3 15.998m9.668 12.688a4.77 4.77 0 0 1-1.861 1.597c1.557.466 3.29.715 5.192.715s3.635-.25 5.194-.716a4.77 4.77 0 0 1-1.861-1.596a17 17 0 0 1-3.333.312c-1.198 0-2.308-.108-3.331-.312"></path>

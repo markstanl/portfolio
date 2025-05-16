@@ -5,7 +5,8 @@ import {Typewriter} from "react-simple-typewriter";
 const HeroTypewriter = () => {
 
     return (
-        <h2 className={'text-2xl font-jetbrains text-brand-sec'}>
+        <h2 className='lg:text-2xl md:text-lg text-sm text-nowrap
+        font-jetbrains text-brand-sec'>
                             <span className="text-brand-sec">
                                 <Typewriter
                                     words={['Student @ UW-Madison', 'ML Developer', 'Frontend Enthusiast', 'Mathematician', 'Philosopher']}

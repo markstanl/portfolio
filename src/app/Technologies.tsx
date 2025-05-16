@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react'
 import {useAnimate, stagger} from 'motion/react'
 import {useInView} from 'react-intersection-observer'
 
-import IconMaps from '@/components/iconMaps'
+import TechnologyTag from "@/components/TechnologyTag";
 
 const technologyButtons = ['Languages', 'Machine Learning', 'Web Development', 'Development Tools']
 
@@ -39,8 +39,9 @@ const Technologies = () => {
     }, [activeContent, animate, scope, inView])
 
     return (
-        <div ref={scope} className="flex flex-col items-center w-2/3">
-            <div className="flex justify-center flex-wrap mb-4 gap-2">
+        <div ref={scope} className="flex flex-col items-center w-full px-4 sm:px-8 md:px-16 lg:px-44">
+            {/* filter buttons */}
+            <div className="flex justify-center flex-wrap mb-4 gap-2 sm:gap-3 md:gap-4">
                 {technologyButtons.map((button) => (
                     <button
                         key={button}
@@ -50,27 +51,27 @@ const Technologies = () => {
                         }}
                         className={`${
                             activeButton === button
-                                ? 'bg-brand-prim text-brand-bg transition-colors hover:bg-brand-prim-hover duration-300'
-                                : 'bg-brand-text text-black transition-colors hover:bg-brand-text-hover duration-300'
-                        } p-2 px-3 m-2 rounded border-brand-border hover:cursor-pointer`}
+                                ? 'bg-brand-prim text-brand-bg hover:bg-brand-prim-hover'
+                                : 'bg-brand-text text-black hover:bg-brand-text-hover'
+                        } p-2 sm:px-3 px-2 rounded border-brand-border transition-colors duration-300 text-xs sm:text-sm md:text-base cursor-pointer`}
                     >
                         {button}
                     </button>
                 ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-3 p-4 bg-brand-text w-full rounded-xl"
-                 ref={sectionRef}>
-                {inView && activeContent.map((item) => (
-                    <div
-                        key={item}
-                        className="tech-item opacity-0 p-2 mx-1 bg-brand-bg px-4 rounded text-brand-text flex items-center gap-2"
-                    >
-                        <IconMaps name={item}/>
-                        {item}
-                    </div>
-                ))}
+
+            {/* tags */}
+            <div
+                className="flex flex-wrap justify-center gap-2 sm:gap-3 p-4 bg-brand-text w-full rounded-xl"
+                ref={sectionRef}
+            >
+                {inView &&
+                    activeContent.map((item) => (
+                        <TechnologyTag key={item} item={item} />
+                    ))}
             </div>
         </div>
+
     )
 }
 

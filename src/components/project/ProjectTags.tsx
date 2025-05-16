@@ -2,9 +2,9 @@
 import React from 'react'
 import {motion} from 'motion/react'
 
-const Tags = ({tags}: { tags: string[] }) => {
+const ProjectTags = ({tags}: { tags: string[] }) => {
     return (
-        <div className={'w-full flex justify-items-start gap-4'}>
+        <div className={'w-full flex justify-items-start md:gap-4 sm:gap-2 gap-1 flex-wrap'}>
             {tags.map((tag => {
 
                 // a bit of randomness for variety
@@ -13,7 +13,7 @@ const Tags = ({tags}: { tags: string[] }) => {
                 return(
                 <motion.span
                     key={tag}
-                    className={'px-2 py-1 text-xs bg-brand-bg text-brand-text rounded-sm select-none'}
+                    className={'px-2 py-1 md:text-sm text-xs bg-brand-bg text-brand-text rounded-sm select-none text-nowrap'}
                     whileHover={{
                         rotateX: 20 * randomSigns[0],
                         rotateY: 3 * randomSigns[1],
@@ -27,4 +27,4 @@ const Tags = ({tags}: { tags: string[] }) => {
         </div>
     )
 }
-export default Tags
+export default ProjectTags
