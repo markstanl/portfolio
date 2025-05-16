@@ -26,11 +26,12 @@ const formatDate = (date: string) => {
 }
 
 type PageProps = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
 
 export default async function PostPage({params}: PageProps){
-    const post = await client.fetch<SanityDocument>(POST_QUERY, {slug: params.slug}, options);
+    const { slug } = await params;
+    const post = await client.fetch<SanityDocument>(POST_QUERY, {slug: slug}, options);
     // const postImageUrl = post.image
     //     ? urlFor(post.image)?.width(550).height(310).url()
     //     : null;
