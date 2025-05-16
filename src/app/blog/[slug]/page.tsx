@@ -25,7 +25,11 @@ const formatDate = (date: string) => {
     });
 }
 
-export default async function PostPage({params}: { params: { slug: string } }) {
+type PageProps = {
+    params: { slug: string };
+};
+
+export default async function PostPage({params}: PageProps){
     const post = await client.fetch<SanityDocument>(POST_QUERY, {slug: params.slug}, options);
     // const postImageUrl = post.image
     //     ? urlFor(post.image)?.width(550).height(310).url()
