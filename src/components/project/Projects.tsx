@@ -5,13 +5,14 @@ import { ProjectType } from '../../../types/project';
 import { type SanityDocument } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 import { client } from '@/sanity/client';
+import {SanityImageSource} from "@sanity/asset-utils";
 
 const PROJECTS_QUERY = `*[_type == "projectType"]{_id, title, link, order, image, body, tags}`;
 const options = { next: { revalidate: 30 } };
 
 export default async function Projects() {
     const builder = imageUrlBuilder(client);
-    const urlFor = (source: any) => builder.image(source).url();
+    const urlFor = (source: SanityImageSource) => builder.image(source).url();
 
     const rawProjects: SanityDocument[] = await client.fetch(PROJECTS_QUERY, {}, options);
 
