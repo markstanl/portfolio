@@ -25,7 +25,7 @@ const Home = () => {
                         <h1 className="lg:text-6xl md:text-5xl lg:py-6 text-4xl font-inter font-bold text-nowrap mb-2">
                             Mark Stanley
                         </h1>
-                        <h2 className="lg:text-2xl md:text-lg text-sm font-jetbrains text-brand-prim w-full">
+                        <h2 className="lg:text-2xl md:text-lg text-sm font-jetbrains text-brand-prim w-full xl:text-nowrap">
                             Software Development Intern
                             <span className="text-brand-text">{' @'}</span>
                             <span className="text-brand-acc text-nowrap">{" C-Motive"}</span>
@@ -35,7 +35,7 @@ const Home = () => {
                         <Download/>
                     </div>
 
-                    <div className="h-full flex items-center justify-center">
+                    <div className="h-full flex items-center justify-center md:pr-20 sm:pr-16">
                         <Image
                             src={markTreeImage}
                             alt="Picture of Mark standing by a tree"
@@ -55,19 +55,19 @@ const Home = () => {
                                 className="h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]"
                             />
                         </div>
-                        <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8">
-                            <p className="w-full indent-4 text-justify">
-                                Hey, I’m Mark. I am a student at UW-Madison studying Computer Science, Mathematics, and
+                        <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8 md:pr-28 sm:pr-24">
+                            <p className="w-full indent-4">
+                                Hey, I’m Mark. I am a rising junior at UW-Madison studying Computer Science, Mathematics, and
                                 Philosophy.
                             </p>
-                            <p className="w-full indent-4 text-justify">
+                            <p className="w-full indent-4">
                                 Currently, I am working at C-Motive as a software developer intern, crafting new
                                 software to help enhance
                                 research efficiency. I am a hard-working developer, with a special interest in machine
                                 learning and front-end
                                 development.
                             </p>
-                            <p className="w-full indent-4 text-justify">
+                            <p className="w-full indent-4">
                                 Off the computer I am a musician, write philosophical works, and rock climb!
                             </p>
                         </div>
@@ -90,9 +90,9 @@ const Home = () => {
                 {/* Creative */}
                 <section className="flex flex-col items-center w-full min-h-[50vh]" id="creative">
                     <h1 className="md:text-5xl text-4xl text-brand-prim mb-16 font-inter font-bold">Creative</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 md:px-24 lg:px-48 justify-items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 md:px-24 lg:px-64 justify-items-center items-center">
                         <div className="text-brand-text text-lg md:text-xl">
-                            <p>
+                            <p className={"md:text-lg text-sm indent-4 px-[15vw] md:px-0"}>
                                 Off the computer, I am a musician and write some philosophy papers. See my creative work
                                 on my{" "}
                                 <Link
@@ -105,18 +105,22 @@ const Home = () => {
                         </div>
                         <div
                             className="bg-brand-text text-brand-bg rounded-lg flex flex-col justify-start p-6 min-w-2/3 gap-4 underline text-base md:text-lg">
-                            <Link
+                            <a
                                 href="/blog"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:text-brand-prim-dark hover:tracking-wide transition-all duration-300 underline"
                             >
                                 Blog →
-                            </Link>
-                            <Link
-                                href="/blog/hugging-wabbits"
+                            </a>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="/blog/the-ethics-of-mrbeast"
                                 className="hover:text-brand-prim-dark hover:tracking-wide transition-all duration-300 underline"
                             >
                                 Published Paper →
-                            </Link>
+                            </a>
                             <a className="hover:text-brand-prim-dark hover:tracking-wide transition-all duration-300 underline cursor-pointer"
                                 href={'https://musescore.com/user/43149374'}
                                 target={'_blank'}

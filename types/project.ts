@@ -4,11 +4,6 @@ export type ProjectType = {
     body: string;
     link: string;
     tags: string[];
-    image?: {
-        asset: {
-            _ref: string;
-            _type: 'reference';
-        };
-    };
+    image?: string;
     order: number;
 };

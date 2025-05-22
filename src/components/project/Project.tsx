@@ -2,6 +2,8 @@ import React from 'react'
 import {ProjectType} from '../../../types/project'
 import ProjectTags from '@/components/project/ProjectTags'
 
+import Image from 'next/image'
+
 type ProjectProps = {
     project: ProjectType
 }
@@ -25,7 +27,19 @@ const Project: React.FC<ProjectProps> = ({project}) => {
                         {project.title}
                     </a>
                 </div>
-                <div className={'w-full h-18 bg-brand-prim rounded-lg outline-1 outline-brand-bg'}/>
+                {project.image ? (
+                    <div className="relative w-full h-18 rounded-lg overflow-hidden bg-brand-prim outline-1 outline-brand-bg">
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                ) : (
+                    <div className="w-full h-18 bg-brand-prim rounded-lg outline-1 outline-brand-bg" />
+                )}
+
                 <p className={'md:text-sm text-xs'}>{project.body}</p>
             </div>
             <ProjectTags tags={project.tags}/>
