@@ -35,11 +35,11 @@ const Home = () => {
                         <Download/>
                     </div>
 
-                    <div className="h-full flex items-center justify-center md:pr-20 sm:pr-16">
+                    <div className="h-full flex items-center justify-center md:pr-20">
                         <Image
                             src={markTreeImage}
                             alt="Picture of Mark standing by a tree"
-                            className="h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]"
+                            className="h-auto max-h-[300px] sm:max-h-[400px] md:max-h-[500px] w-auto shadow-[6px_6px_0_0_#f2f2f2]"
                         />
                     </div>
                 </section>
@@ -52,7 +52,7 @@ const Home = () => {
                             <Image
                                 src={markSquat}
                                 alt="Picture of Mark squatting with aura"
-                                className="h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]"
+                                className="max-h-[300px] sm:max-h-[400px] md:max-h-[500px] w-auto shadow-[6px_6px_0_0_#f2f2f2]"
                             />
                         </div>
                         <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8 md:pr-28 sm:pr-24 text-brand-text">
@@ -92,7 +92,7 @@ const Home = () => {
                     <h1 className="md:text-5xl text-4xl text-brand-prim mb-4 md:mb-16 font-inter font-bold">Creative</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 md:px-24 lg:px-64 justify-items-center items-center">
                         <div className="text-brand-text text-lg md:text-xl">
-                            <p className={"md:text-lg text-sm indent-4 px-[15vw] md:px-0"}>
+                            <p className={"md:text-lg text-sm indent-4 sm:px-[15vw] md:px-0"}>
                                 Off the computer, I am a musician and write some philosophy papers. See my creative work
                                 on my{" "}
                                 <Link
