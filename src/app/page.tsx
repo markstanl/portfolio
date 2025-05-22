@@ -20,7 +20,7 @@ const Home = () => {
             <Navbar/>
             <div className="w-screen min-h-screen bg-brand-bg font-jetbrains flex flex-col items-center gap-8">
                 {/* Hero */}
-                <section className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 justify-items-center">
+                <section className="w-full md:min-h-screen grid grid-cols-1 md:grid-cols-2 justify-items-center">
                     <div className="h-full flex flex-col justify-center text-brand-text p-8 pt-12 md:p-24 gap-2">
                         <h1 className="lg:text-6xl md:text-5xl lg:py-6 text-4xl font-inter font-bold text-nowrap mb-2">
                             Mark Stanley
@@ -39,13 +39,13 @@ const Home = () => {
                         <Image
                             src={markTreeImage}
                             alt="Picture of Mark standing by a tree"
-                            className="h-auto max-h-[300px] sm:max-h-[400px] md:max-h-[500px] w-auto shadow-[6px_6px_0_0_#f2f2f2]"
+                            className="h-auto max-h-[350px] sm:max-h-[400px] md:max-h-[500px] w-auto shadow-[6px_6px_0_0_#f2f2f2]"
                         />
                     </div>
                 </section>
 
                 {/* About  */}
-                <section className="w-full flex flex-col items-center min-h-screen" id="about">
+                <section className="w-full flex flex-col items-center md:min-h-screen" id="about">
                     <h1 className="md:text-5xl text-4xl text-brand-prim font-inter font-bold mb-6">About</h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-full px-8 gap-8 justify-items-center">
                         <div className="flex justify-center">
@@ -75,12 +75,12 @@ const Home = () => {
                 </section>
 
                 {/* Projects */}
-                <section className={'w-full flex flex-col items-center min-h-screen'} id={'projects'}>
+                <section className={'w-full flex flex-col items-center md:min-h-screen'} id={'projects'}>
                     <h1 className={'md:text-5xl text-4xl text-brand-sec font-inter font-bold mb-6'}>Projects</h1>
                     <Projects/>
                 </section>
                 {/* Technologies */}
-                <section className={'flex flex-col items-center min-h-[50vh] w-full mb-2 sm:mb-8'}>
+                <section className={'flex flex-col items-center md:min-h-[50vh] w-full mb-2 sm:mb-8'}>
                     <h1 className={'md:text-5xl text-4xl text-brand-acc font-inter font-bold'}>Technologies</h1>
                     <div className={'flex flex-col items-center w-full mt-8'}>
                         <Technologies/>
@@ -88,7 +88,7 @@ const Home = () => {
                 </section>
 
                 {/* Creative */}
-                <section className="flex flex-col items-center w-full min-h-[50vh]" id="creative">
+                <section className="flex flex-col items-center w-full md:min-h-[50vh]" id="creative">
                     <h1 className="md:text-5xl text-4xl text-brand-prim mb-4 md:mb-16 font-inter font-bold">Creative</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 md:px-24 lg:px-64 justify-items-center items-center">
                         <div className="text-brand-text text-lg md:text-xl">
