@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-6xl mx-auto">
                 <div>
                     <h4 className="text-xl text-brand-sec mb-2">Mark Stanley</h4>
-                    <p>
+                    <p className={'text-brand-text'}>
                         Developer at <span className="text-brand-acc">C-Motive</span>. Student at UW-Madison.
                         Specializing in Machine Learning and Web Development.
                     </p>
@@ -71,7 +71,7 @@ const Footer = () => {
                         <li>
                             <Link
                                 href="/blog"
-                                className="hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                                className="text-brand-text hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
                             >
                                 Blog
                             </Link>
@@ -80,9 +80,9 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p>Designed in Figma</p>
-                    <p>Crafted with Next</p>
-                    <p>Built with Love</p>
+                    <p className={'text-brand-text'}>Designed in Figma</p>
+                    <p className={'text-brand-text'}>Crafted with Next</p>
+                    <p className={'text-brand-text'}>Built with Love</p>
                     <p className="text-brand-acc">-Mark</p>
                 </div>
             </div>

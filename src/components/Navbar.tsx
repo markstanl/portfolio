@@ -8,7 +8,7 @@ const Navbar = () => {
                 <div className="max-w-screen-lg mx-auto
                 flex items-center justify-between py-4 lg:px-32 md:px-16 px-6
                 font-jetbrains
-                    rounded-lg backdrop-blur-md bg-brand-glass/30 border border-brand-border/40 shadow-sm">
+                    rounded-lg backdrop-blur-md bg-brand-glass/30 border border-brand-border/40 shadow-sm text-brand-text">
 
                     <h2 className="font-bold md:text-xl text-lg select-none text-brand-text whitespace-nowrap">
                         Mark Stanley

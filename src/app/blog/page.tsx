@@ -30,7 +30,7 @@ export default async function IndexPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-12 mb-6 font-inter text-brand-sec text-center">
                 Blog
             </h1>
-            <h4 className="text-justify indent-4 text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-12 max-w-3xl md:mb-8">
+            <h4 className="text-brand-text text-justify indent-4 text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-12 max-w-3xl md:mb-8">
                 Here is a collection of various creative works. Ranging from computer science blog posts, to philosophy
                 papers, and even music arrangements!
             </h4>

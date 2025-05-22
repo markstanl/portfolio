@@ -53,7 +53,7 @@ export default async function PostPage({params}: PageProps){
 
     return (
         <main className="container mx-auto min-h-screen w-screen p-8 flex flex-col gap-4 font-jetbrains bg-brand-bg">
-            <Link href="/blog" className="hover:underline hover:text-brand-prim hover:tracking-wide transition-all duration-300">
+            <Link href="/blog" className="text-brand-text hover:underline hover:text-brand-prim hover:tracking-wide transition-all duration-300">
                 ← Back to posts
             </Link>
             {RenderedPage}

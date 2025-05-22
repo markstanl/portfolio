@@ -55,7 +55,7 @@ const Home = () => {
                                 className="h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]"
                             />
                         </div>
-                        <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8 md:pr-28 sm:pr-24">
+                        <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8 md:pr-28 sm:pr-24 text-brand-text">
                             <p className="w-full indent-4">
                                 Hey, I’m Mark. I am a rising junior at UW-Madison studying Computer Science, Mathematics, and
                                 Philosophy.
