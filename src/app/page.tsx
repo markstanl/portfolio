@@ -80,7 +80,7 @@ const Home = () => {
                     <Projects/>
                 </section>
                 {/* Technologies */}
-                <section className={'flex flex-col items-center min-h-[50vh] w-full mb-8'}>
+                <section className={'flex flex-col items-center min-h-[50vh] w-full mb-2 sm:mb-8'}>
                     <h1 className={'md:text-5xl text-4xl text-brand-acc font-inter font-bold'}>Technologies</h1>
                     <div className={'flex flex-col items-center w-full mt-8'}>
                         <Technologies/>
@@ -89,7 +89,7 @@ const Home = () => {
 
                 {/* Creative */}
                 <section className="flex flex-col items-center w-full min-h-[50vh]" id="creative">
-                    <h1 className="md:text-5xl text-4xl text-brand-prim mb-16 font-inter font-bold">Creative</h1>
+                    <h1 className="md:text-5xl text-4xl text-brand-prim mb-4 md:mb-16 font-inter font-bold">Creative</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 md:px-24 lg:px-64 justify-items-center items-center">
                         <div className="text-brand-text text-lg md:text-xl">
                             <p className={"md:text-lg text-sm indent-4 px-[15vw] md:px-0"}>
