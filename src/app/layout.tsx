@@ -16,8 +16,8 @@ const jetBrainsMono = JetBrains_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Mark Stanley",
-  description: "Mark Stanley. Computer Science Student and Software Engineer",
+  title: "Mark Stanley | SWE",
+  description: "Mark Stanley's Portfolio. Computer Science Student and Software Engineer",
 };
 
 export default function RootLayout({

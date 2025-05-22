@@ -2,6 +2,7 @@ import {PortableText, type SanityDocument} from "next-sanity";
 // import imageUrlBuilder from "@sanity/image-url";
 // import type {SanityImageSource} from "@sanity/image-url/lib/types/types";
 import {client} from "@/sanity/client";
+import { redirect } from 'next/navigation'
 
 import Link from "next/link";
 
@@ -35,6 +36,12 @@ export default async function PostPage({params}: PageProps){
     // const postImageUrl = post.image
     //     ? urlFor(post.image)?.width(550).height(310).url()
     //     : null;
+    
+    if (!post) {
+        return (
+            redirect('/blog')
+        );
+    }
 
 
     let RenderedPage;

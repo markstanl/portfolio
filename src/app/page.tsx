@@ -51,7 +51,7 @@ const Home = () => {
                         <div className="flex justify-center">
                             <Image
                                 src={markSquat}
-                                alt="Picture of Mark standing by a tree"
+                                alt="Picture of Mark squatting with aura"
                                 className="h-4/5 w-auto shadow-[6px_6px_0_0_#f2f2f2]"
                             />
                         </div>

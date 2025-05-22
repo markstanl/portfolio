@@ -31,7 +31,7 @@ const Project: React.FC<ProjectProps> = ({project}) => {
                     <div className="relative w-full h-18 rounded-lg overflow-hidden bg-brand-prim outline-1 outline-brand-bg">
                         <Image
                             src={project.image}
-                            alt={project.title}
+                            alt={`${project.title} banner`}
                             fill
                             className="object-cover"
                         />
