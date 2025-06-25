@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <>
             <Navbar/>
-            <div className="w-screen min-h-screen bg-brand-bg font-jetbrains flex flex-col items-center gap-8">
+            <div className="w-full min-h-screen bg-brand-bg font-jetbrains flex flex-col items-center gap-8">
                 {/* Hero */}
                 <section className="w-full md:min-h-screen grid grid-cols-1 md:grid-cols-2 justify-items-center max-w-[2000px]">
                     <div className="h-full flex flex-col justify-center text-brand-text p-8 pt-12 md:p-24 gap-2">
