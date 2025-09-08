@@ -26,9 +26,9 @@ const Home = () => {
                             Mark Stanley
                         </h1>
                         <h2 className="lg:text-2xl md:text-lg text-sm font-jetbrains text-brand-prim w-full xl:text-nowrap">
-                            Software Development Intern
+                            Software Engineer Intern
                             <span className="text-brand-text">{' @'}</span>
-                            <span className="text-brand-acc text-nowrap">{" C-Motive"}</span>
+                            <span className="text-brand-acc text-nowrap">{" Nostomania"}</span>
                         </h2>
                         <HeroTypewriter/>
                         <SocialIcons/>
@@ -57,7 +57,7 @@ const Home = () => {
                         </div>
                         <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8 md:pr-28 sm:pr-24 text-brand-text">
                             <p className="w-full indent-4">
-                                Hey, I’m Mark. I am a rising junior at UW-Madison studying Computer Science, Mathematics, and
+                                Hey, I’m Mark. I am a  junior at UW-Madison studying Computer Science, Mathematics, and
                                 Philosophy.
                             </p>
                             <p className="w-full indent-4">
