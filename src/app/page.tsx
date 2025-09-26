@@ -61,9 +61,9 @@ const Home = () => {
                                 Philosophy.
                             </p>
                             <p className="w-full indent-4">
-                                Currently, I am working at C-Motive as a software developer intern, crafting new
-                                software to help enhance
-                                research efficiency. I am a hard-working developer, with a special interest in machine
+                                Currently, I am working at Nostomania as an SWE. I am also doing Computer Vision
+                                research in vision foundational models.
+                                I am a hard-working developer, with a special interest in machine
                                 learning and front-end
                                 development.
                             </p>
