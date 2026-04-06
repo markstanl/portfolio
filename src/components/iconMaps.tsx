@@ -1,10 +1,10 @@
 import {
     SiPython, SiJavascript, SiTypescript, SiReact, SiJupyter, SiPytorch, SiTensorflow, SiScikitlearn, SiNumpy,
     SiScipy, SiGeopandas, SiPandas, SiPolars, SiNextdotjs, SiTailwindcss, SiHtml5, SiFlask, SiFastapi, SiGit, SiGithub,
-    SiDocker, SiLinux, SiDialogflow, SiFigma
+    SiDocker, SiLinux, SiDialogflow, SiFigma, SiLightning, SiHuggingface, SiOpencv, SiWeightsandbiases
 } from 'react-icons/si'
 import {FaJava} from "react-icons/fa";
-import {TbSql, TbMessageLanguage, TbBrandReactNative} from "react-icons/tb";
+import {TbSql, TbMessageLanguage, TbBrandReactNative, TbHexagonLetterA } from "react-icons/tb";
 
 import React, {JSX} from 'react'
 
@@ -129,6 +129,37 @@ const iconMap: IconMap = {
     </svg>),
     'Dialogflow': SiDialogflow,
     'Figma': SiFigma,
+    'Lightning': SiLightning,
+    "Transformers": SiHuggingface,
+    "Albumentations": TbHexagonLetterA,
+    "Anomalib": (
+        <svg
+            width="256"
+            height="256"
+            viewBox="12 44 206 164" // Cropped to the content
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect x="45" y="102" width="28" height="28" fill="currentColor"/>
+            <rect x="45" y="136" width="28" height="28" fill="currentColor"/>
+            <rect x="82" y="85" width="28" height="28" fill="currentColor"/>
+            <rect x="82" y="119" width="28" height="28" fill="currentColor"/>
+            <rect x="82" y="153" width="28" height="28" fill="currentColor"/>
+            <rect x="119" y="141" width="28" height="28" fill="currentColor"/>
+            <rect x="119" y="175" width="28" height="28" fill="currentColor"/>
+            <rect x="17" y="65" width="28" height="28" fill="currentColor"/>
+            <rect
+                x="181.5"
+                y="52.5"
+                width="28"
+                height="28"
+                stroke="currentColor"
+                strokeWidth={6}
+            />
+        </svg>
+    ),
+    'OpenCV': <SiOpencv />,
+    'Wandb': <SiWeightsandbiases />,
 }
 
 type IconMapsProps = {
@@ -136,7 +167,7 @@ type IconMapsProps = {
     className?: string;
 };
 
-const IconMaps: React.FC<IconMapsProps> = ({name, className = 'md:w-5 md:h-5 h-4 w-4 text-brand-prim'}) => {
+const IconMaps: React.FC<IconMapsProps> = ({name, className = 'md:w-5 md:h-5 h-4 w-4 text-brand-prim overflow-visible'}) => {
     const icon = iconMap[name];
     if (!icon) return null;
 

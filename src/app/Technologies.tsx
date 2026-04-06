@@ -9,9 +9,9 @@ import TechnologyTag from "@/components/TechnologyTag";
 const technologyButtons = ['Languages', 'Machine Learning', 'Web Development', 'Development Tools']
 
 const languages = ['Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'MATLAB', 'React', 'SQL', 'LaTeX']
-const machineLearning = ['Python', 'Jupyter Notebook', 'PyTorch', 'TensorFlow', 'scikit-learn', 'NLTK', 'NumPy', 'SciPy', 'pandas', 'Polars', 'geopandas', 'PyArrow', 'Matplotlib']
+const machineLearning = ['Python', 'PyTorch', 'Lightning', "Transformers", "Albumentations", 'Anomalib', 'TensorFlow', 'Jupyter Notebook', 'scikit-learn', 'OpenCV', 'NumPy', 'SciPy', 'pandas', 'Polars', 'geopandas', 'PyArrow', 'Matplotlib']
 const webDevelopment = ['TypeScript', 'JavaScript', 'Next.js', 'Tailwind CSS', 'React', 'React Native', 'HTML', 'CSS', 'Flask', 'FastAPI', 'REST']
-const developmentTools = ['Git', 'GitHub', 'Docker', 'Linux', 'wit.ai', 'Dialogflow', 'Figma']
+const developmentTools = ['Git', 'GitHub', 'Docker', 'Linux', 'wit.ai', 'Dialogflow', 'Figma', "Wandb"]
 
 const technologyArrays: Record<string, string[]> = {
     Languages: languages,

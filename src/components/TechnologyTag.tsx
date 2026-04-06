@@ -6,7 +6,7 @@ import {motion} from 'motion/react'
 const TechnologyTag = ({item}: {item: string}) => {
     return (
         <div
-            className="tech-item opacity-0 p-2 sm:px-4 px-2 bg-brand-bg rounded text-brand-text flex items-center gap-2 select-none text-sm sm:text-base"
+            className="tech-item opacity-0 p-2 sm:px-4 px-2 bg-brand-bg rounded text-brand-text flex items-center gap-2 select-none text-sm sm:text-base overflow-visible"
         >
             <motion.span
                 animate={{rotate: 0, scale: 1}}

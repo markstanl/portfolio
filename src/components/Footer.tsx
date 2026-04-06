@@ -8,8 +8,9 @@ const Footer = () => {
                 <div>
                     <h4 className="text-xl text-brand-sec mb-2">Mark Stanley</h4>
                     <p className={'text-brand-text'}>
-                        Developer at <span className="text-brand-acc">Nostomania</span>. Student at UW-Madison.
-                        Specializing in Machine Learning and Web Development.
+                        Developer at <span className="text-brand-acc">Nostomania</span>.
+                        Student at UW-Madison.
+                        Specializing in ML.
                     </p>
                 </div>
 

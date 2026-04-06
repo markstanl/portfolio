@@ -157,17 +157,29 @@ const MusicTypeContent = ({ post }: { post: Music }) => {
             </div>
             <div className="w-full max-w-2xl">
                 <p className="text-brand-text text-sm sm:text-base">{post.foreword}</p>
-                {post.conductingVideoEmbed && (
+                {post.conductingVideoEmbed && (post.conductingVideoEmbed.includes("google") ?
+                    (
+                        <iframe
+                            src={post.conductingVideoEmbed}
+                            className="w-full aspect-video mt-4 rounded"
+                            allow="autoplay"
+                        >
+                            This video is not supported in your browser. You can still view it here:{" "}
+                            {post.conductingVideoEmbed}
+                        </iframe>
+                    )
+                        :
+                    (
                     <video
                         src={post.conductingVideoEmbed}
                         controls
-                        className="w-full h-auto mt-4 rounded"
+                        className="w-full aspect-video mt-4 rounded"
                         preload="metadata"
                     >
                         This video is not supported in your browser. You can still view it here:{" "}
                         {post.conductingVideoEmbed}
                     </video>
-                )}
+                ))}
             </div>
         </div>
     );

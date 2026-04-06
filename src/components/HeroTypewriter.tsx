@@ -9,7 +9,7 @@ const HeroTypewriter = () => {
         font-jetbrains text-brand-sec'>
                             <span className="text-brand-sec">
                                 <Typewriter
-                                    words={['Student @ UW-Madison', 'ML Developer', 'Frontend Enthusiast', 'Mathematician', 'Philosopher']}
+                                    words={['Student @ UW-Madison', 'ML Developer', 'Frontend Enthusiast', 'Philosopher', 'Mathematician']}
                                     loop
                                     cursor
                                     cursorStyle="|"
