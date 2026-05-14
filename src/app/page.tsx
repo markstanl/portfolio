@@ -26,9 +26,9 @@ const Home = () => {
                             Mark Stanley
                         </h1>
                         <h2 className="lg:text-2xl md:text-lg text-sm font-jetbrains text-brand-prim w-full xl:text-nowrap">
-                            Software Engineer Intern
+                            Undergrad AI Researcher
                             <span className="text-brand-text">{' @'}</span>
-                            <span className="text-brand-acc text-nowrap">{" Nostomania"}</span>
+                            <span className="text-brand-acc text-nowrap">{" UW-Madison"}</span>
                         </h2>
                         <HeroTypewriter/>
                         <SocialIcons/>
@@ -57,15 +57,11 @@ const Home = () => {
                         </div>
                         <div className="flex flex-col w-full justify-center items-start gap-4 md:text-lg text-sm md:p-12 sm:p-8 md:pr-28 sm:pr-24 text-brand-text">
                             <p className="w-full indent-4">
-                                Hey, I’m Mark. I am a  junior at UW-Madison studying Computer Science, Mathematics, and
+                                Hey, I’m Mark. I am a rising senior at UW-Madison studying Computer Science, Mathematics, and
                                 Philosophy.
                             </p>
                             <p className="w-full indent-4">
-                                Currently, I am working at Nostomania as an SWE. I am also doing Computer Vision
-                                research in vision foundational models.
-                                I am a hard-working developer, with a special interest in machine
-                                learning and front-end
-                                development.
+                                Currently, I am an undergraduate researcher at the University of Wisconsin–Madison working on machine learning research, with a broader interest in AI safety. I also work as a software engineer at Nostomania.
                             </p>
                             <p className="w-full indent-4">
                                 Off the computer I am a musician, write philosophical works, and rock climb!
