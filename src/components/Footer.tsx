@@ -82,7 +82,15 @@ const Footer = () => {
 
                 <div>
                     <p className={'text-brand-text'}>Designed in Figma</p>
-                    <p className={'text-brand-text'}>Crafted with Next</p>
+                    <p className={'text-brand-text'}>Crafted with{" "}
+                        <Link
+                            href="https://github.com/markstanl/portfolio"
+                            className="text-brand-text hover:text-brand-prim hover:tracking-wide transition-all duration-300 underline"
+                            target={"_blank"}
+                        >
+                            Next
+                        </Link>
+                    </p>
                     <p className={'text-brand-text'}>Built with Love</p>
                     <p className="text-brand-acc">-Mark</p>
                 </div>
